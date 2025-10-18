@@ -1,0 +1,6 @@
+[submodule "nuclei"]
+	path = nuclei
+	url = git@github.com:charles1024/nuclei.git
+[submodule "nuclei-templates"]
+	path = nuclei-templates
+	url = https://github.com/charles1024/nuclei-templates
