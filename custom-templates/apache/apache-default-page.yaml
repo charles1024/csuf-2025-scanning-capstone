@@ -1,14 +1,15 @@
 id: apache-default-page
+
 info:
   name: Apache Default Page Detection
   author: max-demi
   severity: info
   description: Detects if a server is running a default Apache HTTP page
-tags: custom,apache,precheck
-http:
+  tags: [apache, default, page]
+
+requests:
   - method: GET
-    path:
-      - "/"
+    path: [""]
     matchers:
       - type: word
         part: body
