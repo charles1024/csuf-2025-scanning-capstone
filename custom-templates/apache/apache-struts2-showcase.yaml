@@ -1,0 +1,19 @@
+id: apache-struts2-showcase
+info:
+  name: Apache Struts2 Showcase Page Detection
+  author: max-demi
+  severity: info
+  description: Detects if a server is running the Struts2 showcase application
+tags: custom,apache,precheck
+http:
+  - method: GET
+    path:
+      - "/struts2-showcase/index.action"
+    matchers:
+      - type: word
+        part: body
+        words:
+          - "Struts 2 Showcase"
+      - type: status
+        status:
+          - 200
