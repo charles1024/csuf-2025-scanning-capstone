@@ -1,0 +1,29 @@
+id: apache-cfx-detect
+
+info:
+  name: Apache cfx
+  author: pdteam
+  severity: info
+  classification:
+    cpe: cpe:2.3:a:apache:cfx:*:*:*:*:*:*:*:*
+  metadata:
+    verified: true
+    max-request: 1
+    vendor: apache
+    product: cfx
+    shodan-query: http.html:"Apache cfx"
+  tags: tech,apache,cfx,intrusive
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}"
+
+    matchers-condition: and
+    matchers:
+      - type: word
+        part: header
+        words:
+          - "Jetty"
+# this one was a 404 page!
+# digest: 4b0a0048304602210094e142ba5c1fa474c75be9a8bfa6851dd1e06e5a08da6e10b6a32d461631709c022100b5fc01a281c6a86c69d11fc39586964fe265a018aae69a2162cad2c39aa9a5d7:922c64590222798bb761d5b6d8e72950
