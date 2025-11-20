@@ -15,6 +15,12 @@ info:
     verified: true
     max-request: 2
   tags: default-login,tomcat
+  version-ranges:
+    between-inclusive: 8.5.50, 8.5.81
+    between-inclusive: 9.0.30, 9.0.64
+    between-inclusive: 10.0.0, 10.0.22
+    equals: 10.1.0
+    
 
 http:
   - raw:

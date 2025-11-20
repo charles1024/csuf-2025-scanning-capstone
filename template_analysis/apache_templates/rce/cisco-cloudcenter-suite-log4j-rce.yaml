@@ -21,6 +21,11 @@ info:
     shodan-query: title:"CloudCenter Suite"
     fofa-query: title="CloudCenter Suite"
   tags: cve,cve2021,jndi,log4j,rce,oast,cloudcenter,cisco,kev
+  version-ranges:
+    between-inclusive: 2.0.0, 2.3.0
+    between-inclusive: 2.3.2, 2.12.1
+    between-inclusive: 2.12.4, 2.15.0
+
 variables:
   rand1: '{{rand_int(111, 999)}}'
   rand2: '{{rand_int(111, 999)}}'
