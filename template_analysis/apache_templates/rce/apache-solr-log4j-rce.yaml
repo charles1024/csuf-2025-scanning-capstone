@@ -26,6 +26,9 @@ info:
     product: solr
     vendor: apache
   tags: vulhub,cve,solr,oast,log4j,cve2021,rce,apache,jndi,kev
+  version-ranges:
+    between-inclusive: 7.4.0, 7.7.3
+    between-inclusive: 8.0.0, 8.11.0
 variables:
   rand1: '{{rand_int(111, 999)}}'
   rand2: '{{rand_int(111, 999)}}'

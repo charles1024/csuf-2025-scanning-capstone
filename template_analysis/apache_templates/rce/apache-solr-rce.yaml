@@ -10,6 +10,8 @@ info:
   metadata:
     max-request: 2
   tags: solr,apache,rce,oast,intrusive
+  version-ranges:
+    equals: 9.1
 
 http:
   - raw:
