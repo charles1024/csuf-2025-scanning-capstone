@@ -1,1 +1,28 @@
 id: master-template
+info:
+  name: Master Workflow Template
+  author: max-and-demi
+
+stop-at-first-match: true
+
+workflows:
+  - template: ./airflow-detect.yaml
+    subtemplates:
+      - template: ../apache/airflow-templates/apache-airflow-detect-flower.yaml
+      - template: ../apache/airflow-templates/apache-airflow-detect.yaml
+      
+  - template: ./ofbiz-detect.yaml
+    subtemplates:
+      - template: ../apache/ofbiz-templates/apache-ofbiz-detect.yaml
+  - template: ./druid-detect.yaml        
+    subtemplates:
+      - template: ../apache/druid-templates/apache-druid-detect.yaml
+  - template: ./cfx-detect.yaml
+    subtemplates:
+      - template: ../apache/apacheCFX-templates/apache-cfx-detect-404.yaml
+      - template: ../apache/apacheCFX-templates/apache-cfx-detect.yaml
+  - template: ./tomcat-detect.yaml
+    subtemplates:
+      - template: ../apache/tomcat-templates/apache-tomcat-detect.yaml
+          
+            
