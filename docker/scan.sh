@@ -1,2 +1,2 @@
 #!/bin/bash
-nuclei -l targets.txt -rate-limit 50
+nuclei -l targets.txt -bulk-size 2
