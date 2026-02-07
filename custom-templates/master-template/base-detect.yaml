@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 id: apache-detect
 info:
   name: Base-Apache-Detection
@@ -37,4 +38,74 @@ http:
         words:
           - "wsdl:definitions"
           - "Apache CXF"
+=======
+id: apache-detect
+info:
+  name: Base-Apache-Detection
+  author: cyber-squadd
+
+http:
+  - method: GET
+    stop-at-first-match: true
+
+    path:
+      - "{{BaseURL}}"
+
+    matchers-condition: or
+    matchers:
+      - type: word
+        part: header
+        words:
+          - "TornadoServer"
+        name: airflow
+
+  - method: GET
+    stop-at-first-match: true
+    path:
+      - "{{BaseURL}}/control/main"
+    matchers-condition: or
+    matchers:
+      - type: word
+        part: header
+        words:
+          - "OFBiz.Visitor="
+          - "Apache OFBiz"
+        condition: or
+        name: ofbiz
+
+      - type: dsl
+        dsl:
+          - 'contains(tolower(body), "apache tomcat")'
+          - 'contains(tolower(body), "/manager/html")'
+          - 'contains(tolower(body), "/manager/status")'
+        condition: or
+        name: tomcat
+
+  - method: GET
+    stop-at-first-match: true
+    path: 
+      - "{{BaseURL}}/test?wsdl"
+    matchers:
+      - type: word
+        part: body
+        words:
+          - "wsdl:definitions"
+        name: apache-cfx
+
+  - method: GET
+    stop-at-first-match: true
+    path: 
+      - "{{BaseURL}}/druid"
+      - "{{BaseURL}}/druid/coordinator/v1/cluster"
+    matchers-condition: or
+    
+    matchers:
+      - type: word
+        part: body
+        words:
+          - "jelly"
+          - "druid"
+        condition: or
+        name: druid
+>>>>>>> origin/main
     
