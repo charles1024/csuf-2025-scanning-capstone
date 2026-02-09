@@ -1,0 +1,33 @@
+id: ofbiz-detect
+
+info:
+  name: Apache OFBiz - Detect
+  author: rxerium
+  severity: info
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}"
+
+    host-redirects: true
+    max-redirects: 2
+    stop-at-first-match: true
+    matchers-condition: and
+    matchers:
+      - type: word
+        part: response
+        words:
+          - "OFBiz.Visitor="
+          - "Apache OFBiz"
+        condition: or
+
+      - type: status
+        status:
+          - 200
+    
+    extractors:
+      - type: regex
+        name: ofbiz
+        regex:
+          - "Apache OFBiz ([0-9]+\\.[0-9]+\\.[0-9]+)"

@@ -1,0 +1,28 @@
+id: airflow-detect
+info:
+  name: Airflow Detect
+  author: pdteam
+
+http:
+  # Airflow
+  - method: GET
+    path:
+      - "{{BaseURL}}/{{randstr}}"
+
+    stop-at-first-match: true
+    matchers-condition: and
+    matchers:
+      - type: word
+        part: body
+        words:
+          - "Airflow 404"
+
+      - type: status
+        status:
+          - 404
+
+    extractors:
+      - type: regex
+        name: airflow
+        regex:
+          - "Airflow ([0-9]+\\.[0-9]+\\.[0-9]+)"

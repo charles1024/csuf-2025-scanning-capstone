@@ -1,0 +1,25 @@
+id: druid-detect
+info:
+  name: Apache Druid Detect
+  author: max-and-demi
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/druid"
+      - "{{BaseURL}}/druid/coordinator/v1/cluster"
+    stop-at-first-match: true
+    matchers-condition: or
+    matchers:
+      - type: word
+        part: body
+        words:
+          - "jelly"
+          - "druid"
+    extractors:
+      - type: regex
+        name: druid
+        regex:
+          - "Druid ([0-9]+\\.[0-9]+\\.[0-9]+)"
+
+        
