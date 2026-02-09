@@ -382,4 +382,4 @@ require (
 	moul.io/http2curl v1.0.0 // indirect
 )
 
-replace github.com/projectdiscovery/nuclei/v3 => github.com/charles1024/csuf-2025-scanning-capstone/nuclei 361f877
+//replace github.com/projectdiscovery/nuclei/v3 => github.com/charles1024/csuf-2025-scanning-capstone/nuclei 361f877
