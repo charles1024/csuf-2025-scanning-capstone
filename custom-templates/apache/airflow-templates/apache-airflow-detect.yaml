@@ -1,7 +1,7 @@
 id: apache-airflow-detect
 
 info:
-  name: Apache Airflow
+  name: Apache airflow
   author: pdteam
   severity: info
   classification:
@@ -11,7 +11,7 @@ info:
     max-request: 1
     vendor: apache
     product: airflow
-    shodan-query: http.html:"Apache Airflow"
+    shodan-query: http.html:"Apache airflow"
   tags: tech,apache,airflow,intrusive
 
 http:
