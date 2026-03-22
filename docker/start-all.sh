@@ -22,7 +22,7 @@ while IFS= read -r -d '' compose_file; do
 
     # ---------- Common start ----------
     echo "Starting containers: docker compose up -d"
-    docker compose up -d
+    docker compose up -d || echo "Failed to start containers in $dir"
 
     echo ""
     cd - >/dev/null
