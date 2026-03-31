@@ -9,8 +9,11 @@ workflows:
     matchers:
       - name: airflow
         subtemplates:
-          - template: ../apache/airflow-templates/apache-airflow-detect-flower.yaml
-          - template: ../apache/airflow-templates/apache-airflow-detect.yaml
+          - template: ../apache/airflow-templates/airflow-tier1/CVE-2020-11981.yaml
+          - template: ../apache/airflow-templates/airflow-tier1/CVE-2020-17526.yaml
+          - template: ../apache/airflow-templates/airflow-tier1/airflow-default-login.yaml
+          - template: ../apache/airflow-templates/airflow-tier1/airflow-v3-default-login.yaml
+          - template: ../apache/airflow-templates/airflow-tier1/auth-bypass-117526.yaml
           - tags: airflow
         
       - name: ofbiz  
@@ -20,17 +23,31 @@ workflows:
     
       - name: tomcat  
         subtemplates: 
-          - template: ../apache/tomcat-templates/apache-tomcat-detect.yaml
+          - template: ../apache/tomcat-templates/tomcat-tier1/CVE-2016-8735.yaml
+          - template: ../apache/tomcat-templates/tomcat-tier1/CVE-2017-12617.yaml
+          - template: ../apache/tomcat-templates/tomcat-tier1/CVE-2019-0232.yaml
+          - template: ../apache/tomcat-templates/tomcat-tier1/CVE-2020-17530.yaml
+          - template: ../apache/tomcat-templates/tomcat-tier1/CVE-2020-1938.yaml
+          - template: ../apache/tomcat-templates/tomcat-tier1/CVE-2020-9484.yaml
+          - template: ../apache/tomcat-templates/tomcat-tier1/CVE-2021-31805.yaml
+          - template: ../apache/tomcat-templates/tomcat-tier1/CVE-2025-24813.yaml
+          - template: ../apache/tomcat-templates/tomcat-tier1/tomcat-default-login.yaml
           - tags: tomcat
           
       - name: apache-cfx
         subtemplates:
         - template: ../apache/apacheCFX-templates/apache-cfx-detect-404.yaml
         - template: ../apache/apacheCFX-templates/apache-cfx-detect.yaml
+        - template: ../apache/apacheCFX-templates/cxf-tier1/xenmobile-server-log4j-rce.yaml
     
       - name: druid
         subtemplates:
-        - template: ../apache/druid-templates/apache-druid-detect.yaml
+        - template: ../apache/druid-templates/druid-tier1/CVE-2021-25646.yaml
+        - template: ../apache/druid-templates/druid-tier1/CVE-2021-36749.yaml
+        - template: ../apache/druid-templates/druid-tier1/CVE-2021-44228.yaml
+        - template: ../apache/druid-templates/druid-tier1/CVE-2021-45046.yaml
+        - template: ../apache/druid-templates/druid-tier1/CVE-2023-25194.yaml
+        - template: ../apache/druid-templates/druid-tier1/apache-druid-log4j-rce.yaml
     
       
           
