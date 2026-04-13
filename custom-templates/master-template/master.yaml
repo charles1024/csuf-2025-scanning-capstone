@@ -13,7 +13,7 @@ workflows:
           - template: ../apache/airflow-templates/airflow-tier1/CVE-2020-17526.yaml
           - template: ../apache/airflow-templates/airflow-tier1/airflow-default-login.yaml
           - template: ../apache/airflow-templates/airflow-tier1/airflow-v3-default-login.yaml
-          - template: ../apache/airflow-templates/airflow-tier1/auth-bypass-117526.yaml
+          - template: ../apache/airflow-templates/airflow-tier1/auth-bypass-17526.yaml
           - tags: airflow
         
       - name: ofbiz  
