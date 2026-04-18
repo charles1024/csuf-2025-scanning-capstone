@@ -67,7 +67,7 @@ http:
         condition: and
         name: 35mail
         words:
-          - "35"
+          - 35
           - images/mail/35pushmail.app.png
           - switchingserverpopup
 
@@ -80,7 +80,7 @@ http:
         condition: and
         name: 360-enterprise-security
         words:
-          - 360entinst
+          - "360entinst"
           - 关于全网部署360私有云的通知
 
       - type: word
@@ -2883,7 +2883,7 @@ http:
       - type: word
         name: dfe-scada
         words:
-          - "536870912"
+          - 536870912
 
       - type: word
         name: dhc-oa
@@ -5354,7 +5354,7 @@ http:
       - type: word
         name: huawei-auth-server
         words:
-          - 75718c9a-f029-11d1-a1ac-00c04fb6c223
+          - "75718c9a-f029-11d1-a1ac-00c04fb6c223"
 
       - type: word
         name: huawei-esight
@@ -10363,7 +10363,7 @@ http:
       - type: word
         name: reddoxx
         words:
-          - 148779de-1cf1-49bb-8bdb-129321cf8974
+          - "148779de-1cf1-49bb-8bdb-129321cf8974"
 
       - type: word
         name: redflag-linux-cluster-management-system
@@ -12209,7 +12209,7 @@ http:
       - type: word
         name: telinxinxi-527meeting
         words:
-          - 527meeting
+          - "527meeting"
 
       - type: word
         name: telinxinxi-527meeting

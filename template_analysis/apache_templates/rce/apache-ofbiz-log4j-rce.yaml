@@ -25,11 +25,11 @@ info:
     vendor: apache
   tags: cve,cve2021,ofbiz,oast,log4j,rce,apache,jndi,kev
   version-ranges:
-    less-than: 8.12.03
+    less_than: "8.12.03"
     
 variables:
-  rand1: '{{rand_int(111, 999)}}'
-  rand2: '{{rand_int(111, 999)}}'
+  rand1: '{{rand_int(111,999)}}'
+  rand2: '{{rand_int(111,999)}}'
 
 http:
   - raw:

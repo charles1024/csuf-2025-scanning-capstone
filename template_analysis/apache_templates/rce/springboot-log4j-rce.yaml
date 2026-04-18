@@ -20,8 +20,8 @@ info:
     max-request: 1
   tags: cve,cve2021,springboot,rce,oast,log4j,kev
 variables:
-  rand1: '{{rand_int(111, 999)}}'
-  rand2: '{{rand_int(111, 999)}}'
+  rand1: '{{rand_int(111,999)}}'
+  rand2: '{{rand_int(111,999)}}'
 
 http:
   - raw:

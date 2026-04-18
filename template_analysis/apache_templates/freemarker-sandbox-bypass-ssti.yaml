@@ -12,7 +12,7 @@ info:
     verified: true
   tags: ssti,dast,freemarker
   version-ranges:
-    less-than: 2.3.30
+    less_than: "2.3.30"
 
 http:
   - pre-condition:

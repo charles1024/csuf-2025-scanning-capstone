@@ -21,8 +21,8 @@ info:
     vendor: papercut
   tags: cve,cve2021,rce,jndi,log4j,papercut,oast,kev
 variables:
-  rand1: '{{rand_int(111, 999)}}'
-  rand2: '{{rand_int(111, 999)}}'
+  rand1: '{{rand_int(111,999)}}'
+  rand2: '{{rand_int(111,999)}}'
   str: "{{rand_base(5)}}"
 
 http:

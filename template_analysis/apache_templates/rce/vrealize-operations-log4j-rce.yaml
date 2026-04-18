@@ -26,8 +26,8 @@ info:
     vendor: vmware
   tags: cve,cve2021,oast,rce,log4j,vmware,vrealize,kev
 variables:
-  rand1: '{{rand_int(111, 999)}}'
-  rand2: '{{rand_int(111, 999)}}'
+  rand1: '{{rand_int(111,999)}}'
+  rand2: '{{rand_int(111,999)}}'
 
 http:
   - raw:

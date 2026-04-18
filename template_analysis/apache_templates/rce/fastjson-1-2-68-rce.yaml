@@ -17,7 +17,7 @@ info:
     max-request: 3
   tags: fastjson,rce,deserialization,oast
   version-ranges:
-    equals: 1.2.68
+    equals: "1.2.68"
 
 http:
   - raw:

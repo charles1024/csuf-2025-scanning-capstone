@@ -20,8 +20,8 @@ info:
     shodan-query: html:"vmw_nsx_logo-black-triangle-500w.png"
   tags: cve,cve2021,rce,jndi,log4j,graylog,kev,oast
 variables:
-  rand1: '{{rand_int(111, 999)}}'
-  rand2: '{{rand_int(111, 999)}}'
+  rand1: '{{rand_int(111,999)}}'
+  rand2: '{{rand_int(111,999)}}'
 
 http:
   - raw:

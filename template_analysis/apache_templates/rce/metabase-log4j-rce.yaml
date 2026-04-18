@@ -20,8 +20,8 @@ info:
     shodan-query: title:"Metabase"
   tags: cve,cve2021,rce,jndi,log4j,metabase,kev,oast
 variables:
-  rand1: '{{rand_int(111, 999)}}'
-  rand2: '{{rand_int(111, 999)}}'
+  rand1: '{{rand_int(111,999)}}'
+  rand2: '{{rand_int(111,999)}}'
 
 http:
   - method: GET
