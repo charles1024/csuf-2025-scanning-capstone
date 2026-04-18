@@ -2,6 +2,7 @@ id: master-template
 info:
   name: Master Workflow Template
   author: max-and-demi
+<<<<<<< HEAD
   severity: info
 
 
@@ -12,20 +13,40 @@ workflows:
         subtemplates:
           - template: custom-templates/apache/airflow-templates/apache-airflow-detect-flower.yaml
           - template: custom-templates/apache/airflow-templates/apache-airflow-detect.yaml
+=======
+
+
+workflows:
+  - template: ./base-detect.yaml
+    matchers:
+      - name: airflow
+        subtemplates:
+          - template: ../apache/airflow-templates/apache-airflow-detect-flower.yaml
+          - template: ../apache/airflow-templates/apache-airflow-detect.yaml
+>>>>>>> main
           - tags: airflow
         
       - name: ofbiz  
         subtemplates:
+<<<<<<< HEAD
           - template: custom-templates/apache/ofbiz-templates/apache-ofbiz-detect.yaml
+=======
+          - template: ../apache/ofbiz-templates/apache-ofbiz-detect.yaml
+>>>>>>> main
           - tags: ofbiz
     
       - name: tomcat  
         subtemplates: 
+<<<<<<< HEAD
           - template: custom-templates/apache/tomcat-templates/apache-tomcat-detect.yaml
+=======
+          - template: ../apache/tomcat-templates/apache-tomcat-detect.yaml
+>>>>>>> main
           - tags: tomcat
           
       - name: apache-cfx
         subtemplates:
+<<<<<<< HEAD
         - template: custom-templates/apache/apacheCFX-templates/apache-cfx-detect-404.yaml
         - template: custom-templates/apache/apacheCFX-templates/apache-cfx-detect.yaml
     
@@ -36,3 +57,15 @@ workflows:
       
           
             
+=======
+        - template: ../apache/apacheCFX-templates/apache-cfx-detect-404.yaml
+        - template: ../apache/apacheCFX-templates/apache-cfx-detect.yaml
+    
+      - name: druid
+        subtemplates:
+        - template: ../apache/druid-templates/apache-druid-detect.yaml
+    
+      
+          
+            
+>>>>>>> main
