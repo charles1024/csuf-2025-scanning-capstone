@@ -17,19 +17,6 @@ http:
         words:
           - "TornadoServer"
         name: airflow
-<<<<<<< HEAD
-  - method: GET
-    stop-at-first-match: true
-    path:
-      - "{{BaseURL}}"
-    matchers-condition: or
-    matchers:
-      - type: dsl
-        dsl:
-          - 'contains(tolower(body), "apache tomcat")'
-        name: tomcat
-=======
->>>>>>> main
 
   - method: GET
     stop-at-first-match: true
