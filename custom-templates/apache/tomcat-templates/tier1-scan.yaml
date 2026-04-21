@@ -1,0 +1,27 @@
+id: tomcat-tier1
+
+info:
+  name: Apache tomcat
+  author: pdteam
+  severity: info
+  classification:
+    cpe: cpe:2.3:a:apache:tomcat:*:*:*:*:*:*:*:*
+  metadata:
+    verified: true
+    max-request: 1
+    vendor: apache
+    product: tomcat
+    shodan-query: http.html:"Apache tomcat"
+  tags: tech,apache,tomcat,intrusive
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}"
+
+    matchers-condition: and
+    matchers:
+      - type: word
+        part: header
+        words:
+          - "Apache-Coyote/1.1"
